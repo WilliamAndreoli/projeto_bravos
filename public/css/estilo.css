@@ -1,0 +1,347 @@
+body {
+    font-family: 'Raleway';
+}
+
+/* Loader */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #f97316;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/* Animações */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Melhorias nos botões */
+.btn {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+  }
+  
+  .btn:hover::after {
+    width: 300px;
+    height: 300px;
+  }
+
+/*Menu*/
+#menu-nav {
+    background-color: #1E1E1E;
+}
+
+.nav-link-bravos {
+    color: #E17524;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-link-bravos:hover {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/*Botão*/
+.btn-bravos {
+    background-color: #E17524;
+    color: black;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: 1px solid #E17524;
+}
+
+.btn-bravos:hover {
+    background-color: #994D15;
+    color: #fff;
+}
+
+/*Home*/
+#home {
+    background-color: black;
+    height: 100vh;
+}
+
+.row-img {
+    margin: auto;
+}
+
+.col-img {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: fit-content;
+}
+
+.texto-home {
+    color: #E17524;
+    font-size: 2.5rem;
+    margin: auto;
+}
+
+.button-home {
+    margin: auto;
+}
+
+.btn-bravos-home {
+    background-color: #E17524;
+    color: black;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: 1px solid #E17524;
+}
+
+.btn-bravos-home:hover {
+    background-color: #994D15;
+    color: #fff;
+}
+
+/*Sobre Nós*/
+.section-title {
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.servico-title {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+.text-sobre {
+    font-size: 1.8rem;
+    align-self: center;
+}
+
+.text-color-dest {
+    color: #E17524;
+    font-weight: bold;
+}
+
+.img-sobre {
+    margin-top: 30px;
+}
+
+.servicos-li {
+    font-size: 1.8rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*GALERIA*/
+.ver-mais {
+    color: #E17524;
+    font-weight: bold;
+}
+
+.link-ver-mais {
+    color: #E17524;
+    text-decoration: none;
+}
+
+.link-ver-mais:hover {
+    color: #E17524;
+    text-decoration: none;
+}
+
+/* Mantém as imagens parcialmente visíveis */
+.custom-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    overflow: visible; /* Importante */
+  }
+  
+  /* Aplica estilo às imagens */
+  .carousel-inner {
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+  }
+  
+  .carousel-item {
+    flex: 0 0 70%;
+    margin: 0 15px;
+    /* transition: transform 0.5s ease; */
+    /* transform: scale(0.9); */
+    opacity: 0.6;
+    z-index: 1;
+  }
+  
+  .carousel-item.active {
+    /* transform: scale(1.1); */
+    opacity: 1;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    z-index: 2;
+  }
+  
+  /* Imagens ajustadas */
+  .carousel-img {
+    width: 100%;
+    border: 2px solid #f97316; /* Laranja */
+    border-radius: 10px;
+  }
+  
+  /* Customiza os botões */
+  .custom-icon {
+    background-image: none !important;
+    color: #f97316;
+    font-size: 30px;
+  }
+  
+  .carousel-control-prev-icon::after,
+  .carousel-control-next-icon::after {
+    content: '❮';
+    color: #f97316;
+    font-size: 40px;
+  }
+  
+  .carousel-control-next-icon::after {
+    content: '❯';
+  }
+  
+  /* Tira a opacidade padrão dos controles Bootstrap */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: auto;
+    opacity: 1;
+  }
+
+  /*TIME*/
+  .box-img-barber {
+    display: inline-block;
+    border-radius: 30px;
+  }
+
+  .barber-title {
+    font-weight: bold;
+  }
+
+  /* Adiciona transição suave na imagem */
+  .box-img-barber img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Quando passar o mouse no botão, afeta a imagem acima */
+  .box-img-barber:hover img {
+    transform: scale(1.05); /* pequeno zoom */
+    box-shadow: 0 20px 40px rgba(225, 117, 36, 0.35); /* sombra para destaque */
+  }
+  
+  .btn-wp {
+    border-radius: 30px;
+    color: #fff;
+    background-color: #25D366;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-wp:hover {
+    background-color: #1B8443;
+    color: #fff;
+  }
+
+  /*CONTATO*/
+  .titulo-contato {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .descr-contato {
+    font-size: 1.2rem;
+    margin-left: 65px;
+  }
+
+  .btn-insta {
+    border-radius: 30px;
+    color: #fff;
+    background: linear-gradient(to right, #FECF6C, #DA306F, #545BCF);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .btn-insta:hover {
+    background: linear-gradient(to right, #FECF6C, #DA306F, #545BCF);
+    color: #fff;
+  }
+
+  .link-maps {
+    color: #E17524;
+    text-decoration: none;
+  }
+
+
+  .link-maps:hover {
+    color: #994D15;
+    text-decoration: none;
+  }
+
+  /*Footer*/
+  .nav-bravos {
+    color: #fff;
+    font-size: 0.7rem;
+  }
+
+  .nav-bravos:hover {
+    color: #E17524;
+  }
+
+  .bg-acesso {
+    background-color: #1E1E1E;
+  }
+
+  .titulo-acesso {
+    font-size: 0.9rem;
+    color: #E17524;
+  }
