@@ -15,10 +15,10 @@ function handleParallax() {
     const scrolled = window.pageYOffset;
     const rate = scrolled * 0.5;
     
-    // Verifica se é um dispositivo móvel
-    if (window.innerWidth > 768) {
-        home.style.backgroundPositionY = `calc(50% + ${rate}px)`;
-    }
+    // // Verifica se é um dispositivo móvel
+    // if (window.innerWidth > 768) {
+    //     home.style.backgroundPositionY = `calc(50% + ${rate}px)`;
+    // }
 }
 
 // Animação de fade-in nos elementos

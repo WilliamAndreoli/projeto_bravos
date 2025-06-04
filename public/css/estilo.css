@@ -194,67 +194,67 @@ ul {
 
 /* Mantém as imagens parcialmente visíveis */
 .custom-carousel {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
-    overflow: visible; /* Importante */
-  }
-  
-  /* Aplica estilo às imagens */
-  .carousel-inner {
-    display: flex;
-    justify-content: center;
-    overflow: visible;
-  }
-  
-  .carousel-item {
-    flex: 0 0 70%;
-    margin: 0 15px;
-    /* transition: transform 0.5s ease; */
-    /* transform: scale(0.9); */
-    opacity: 0.6;
-    z-index: 1;
-  }
-  
-  .carousel-item.active {
-    /* transform: scale(1.1); */
-    opacity: 1;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    z-index: 2;
-  }
-  
-  /* Imagens ajustadas */
-  .carousel-img {
-    width: 100%;
-    border: 2px solid #f97316; /* Laranja */
-    border-radius: 10px;
-  }
-  
-  /* Customiza os botões */
-  .custom-icon {
-    background-image: none !important;
-    color: #f97316;
-    font-size: 30px;
-  }
-  
-  .carousel-control-prev-icon::after,
-  .carousel-control-next-icon::after {
-    content: '❮';
-    color: #f97316;
-    font-size: 40px;
-  }
-  
-  .carousel-control-next-icon::after {
-    content: '❯';
-  }
-  
-  /* Tira a opacidade padrão dos controles Bootstrap */
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: auto;
-    opacity: 1;
-  }
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  /* overflow: visible; Importante */
+}
+
+/* Aplica estilo às imagens */
+.carousel-inner {
+  display: flex;
+  justify-content: center;
+  height: 600px;
+}
+
+.carousel-item {
+  flex: 0 0 70%;
+  margin: 0 15px;
+  opacity: 0.6;
+  z-index: 1;
+  height: 100%;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+/* Imagens ajustadas */
+.carousel-img {
+  width: 100%;
+  height: 100%; /* imagem ocupa toda a altura do item */
+  object-fit: cover; /* mantém proporção e preenche */
+  border: 2px solid #f97316;
+  border-radius: 10px;
+}
+
+/* Customiza os botões */
+.custom-icon {
+  background-image: none !important;
+  color: #f97316;
+  font-size: 30px;
+}
+
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+  content: '❮';
+  color: #f97316;
+  font-size: 40px;
+}
+
+.carousel-control-next-icon::after {
+  content: '❯';
+}
+
+/* Tira a opacidade padrão dos controles Bootstrap */
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+  opacity: 1;
+}
 
   /*TIME*/
   .box-img-barber {
