@@ -87,3 +87,39 @@ window.addEventListener('scroll', () => {
         ticking = true;
     }
 }); 
+
+// Animação Carousel
+const imagens = ["img1.png", "img2.png", "img3.png", "img4.png"];
+const imagensPrev = ["img/img2-prev.png", "img/img3-prev.png", "img/img4-prev.png", "img/img1-prev.png"];
+const imagensPrevPrev = ["img/img4-prev.png", "img/img1-prev.png", "img/img2-prev.png", "img/img3-prev.png"];
+
+let index = 0;
+
+function adaptaImagemCarouselNext() {
+    const img = document.getElementById('img-active');
+    const nextImg = document.getElementById('img-next-carousel');
+
+    nextImg.src = imagensPrev[index];
+
+    index = (index + 1) % imagens.length; // loop circular
+}
+
+let indexPrev = 0;
+
+function adaptaImagemCarouselPrev() {
+    const img = document.getElementById('img-active');
+    const prevImg = document.getElementById('img-prev-carousel');
+
+    prevImg.src = imagensPrevPrev[indexPrev];
+
+    indexPrev = (indexPrev + 1) % imagens.length; // loop circular
+}
+
+function alternaImagensPeloBotao() {
+    adaptaImagemCarouselNext();
+    adaptaImagemCarouselPrev();
+}
+
+setInterval(adaptaImagemCarouselNext, 5500);
+setInterval(adaptaImagemCarouselPrev, 5500);
+
