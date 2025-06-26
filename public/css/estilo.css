@@ -402,10 +402,6 @@ display: grid;
 margin-top: 20px;
 }
 
-.box-img-barber img {
-margin-left: 90px;
-}
-
 .img-contato {
 width: 20px;
 }
@@ -444,10 +440,6 @@ margin-right: 20px;
 
 .carousel-inner {
   height: 400px;
-}
-
-.box-img-barber img {
-  margin-left: 100px;
 }
 
 .box-img-barber {
@@ -494,10 +486,6 @@ margin-right: 20px;
   height: 600px;
 }
 
-.box-img-barber img {
-  margin-left: 190px;
-}
-
 .btn-insta {
   width: auto;
 }
@@ -527,10 +515,6 @@ margin-right: 20px;
   text-align: start;
 }
 
-.box-img-barber img {
-  margin-left: 310px;
-}
-
 .nav-link-bravos {
   font-size: 1.2rem;
   text-align: center;
@@ -538,10 +522,6 @@ margin-right: 20px;
 
 .btn-bravos {
   margin-bottom: 0px;
-}
-
-.box-img-barber img {
-  margin-left: 0px;
 }
 
 .box-img-barber {
